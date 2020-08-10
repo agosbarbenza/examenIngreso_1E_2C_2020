@@ -18,7 +18,7 @@ function mostrar() {
 	let acumEdades = 0;
 	let promedioEdades = 0;
 
-	let nombreHombreMasPesado;
+	let nombreHombreMasPesado = "No hay hombres";
 	let pesoHombreMasPesado = 0;
 
 	let bandera = 0;
@@ -27,7 +27,7 @@ function mostrar() {
 
 		nombre = prompt("Ingrese su nombre");
 		while (!(isNaN(nombre))) {
-			alert("Ingrese un nombre válido")
+			alert("Ingrese un nombre válido");
 			nombre = prompt("Ingrese su nombre");
 		}
 
@@ -37,10 +37,10 @@ function mostrar() {
 			peso = parseFloat(prompt("Ingrese un peso en kg"));
 		}
 
-		sexo = prompt("Ingrese sexo 'f' o 'm' ");
+		sexo = prompt("Ingrese sexo femenino ('f') o masculino ('m') ");
 		while (sexo != "f" && sexo != "m") {
-			alert("Sexo invalido");
-			sexo = prompt("Ingrese sexo 'f' o 'm' ");
+			alert("Sexo invalido, elija entre femenino ('f') o masculino ('m')");
+			sexo = prompt("Ingrese sexo femenino ('f') o masculino ('m') ");
 		}
 
 		edad = parseInt(prompt("Ingrese su edad"));
@@ -65,7 +65,7 @@ function mostrar() {
 
 	}
 
-	promedioEdades = (acumEdades/5).toFixed(1);
+	promedioEdades = (acumEdades/5).toFixed(0); //redondea el número con 0 decimales.
 
 	document.write("a)informar la cantidad de mujeres: "+contMujeres+"<br>"+
 	"b)la edad promedio en total: "+promedioEdades+"<br>"+
