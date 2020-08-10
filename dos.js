@@ -15,10 +15,10 @@ c)la marca del más barato de los sólidos
 
   let acumPeso = 0;
 
-  let marcaLiquidoMasCaro;
+  let marcaLiquidoMasCaro = "No hay liquidos"; //por defecto si no hay liquidos;
   let precioLiquidoMasCaro = 0;
 
-  let marcaSolidoMasBarato;
+  let marcaSolidoMasBarato = "No hay solidos"; // por defecto si no hay solidos;
   let precioSolidoMasBarato = 0;
 
   
@@ -29,7 +29,7 @@ c)la marca del más barato de los sólidos
 
     precio = parseFloat(prompt("Ingrese un precio"));
     while (precio < 1 || isNaN(precio)) {
-      alert("precio no válido")
+      alert("precio no válido");
       precio = parseFloat(prompt("Ingrese un precio"));
     }
 
@@ -41,7 +41,7 @@ c)la marca del más barato de los sólidos
 
     tipo = prompt("Ingrese un tipo de producto: 'solido' o 'liquido'");
     while (tipo != "solido" && tipo != "liquido") {
-      alert("tipo no valido");
+      alert("tipo no valido, elija solido o liquido");
       tipo = prompt("Ingrese un tipo de producto: 'solido' o 'liquido'");
     }
 
@@ -67,7 +67,7 @@ c)la marca del más barato de los sólidos
     }
 
     resp = prompt("Desea continuar ingresando datos? si/no");
-  } while (resp == "si")
+  } while (resp == "si");
 
   document.write("a)informar el peso total de la compra: "+acumPeso+"<br>"+
   "b) la marca del más caro de los líquidos: "+marcaLiquidoMasCaro+"<br>"+
